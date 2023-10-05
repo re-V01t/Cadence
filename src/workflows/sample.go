@@ -32,5 +32,5 @@ func SimpleWorkflow(ctx workflow.Context, value string) error {
 // returns a string containing the parameter value.
 func SimpleActivity(ctx context.Context, value string) (string, error) {
 	activity.GetLogger(ctx).Info("SimpleActivity called.", zap.String("Value", value))
-	return "Processed: " + value, nil
+	return "Processed activity: " + value, nil
 }
